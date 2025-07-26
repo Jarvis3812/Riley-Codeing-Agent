@@ -1,0 +1,33 @@
+{
+  "name": "riley-ai-chat",
+  "displayName": "Riley AI Chat",
+  "description": "VS Code extension with a Riley AI chat side panel, similar to Copilot Chat.",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:rileyAI.openChat"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "rileyAI.openChat",
+        "title": "Open Riley AI Chat"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "@types/node": "^20.6.1",
+    "@types/vscode": "^1.86.0"
+  }
+}
