@@ -1,21 +1,4 @@
-import * as vscode from 'vscode';
-
-export function activate(context: vscode.ExtensionContext) {
-  context.subscriptions.push(
-    vscode.commands.registerCommand('rileyAI.openChat', () => {
-      const panel = vscode.window.createWebviewPanel(
-        'rileyAIChat',
-        'Riley AI Chat',
-        vscode.ViewColumn.Beside,
-        {
-          enableScripts: true,
-          retainContextWhenHidden: true,
-        }
-      );
-
-      panel.webview.html = getWebviewContent();
-
-      panel.webview.onDidReceiveMessage(async message => {
+// ...existing code...
 
 import * as vscode from 'vscode';
 
@@ -82,6 +65,7 @@ export function activate(context: vscode.ExtensionContext) {
       }
     })
   );
+}
 // End of file
 
 export function deactivate() {}
